@@ -1,0 +1,24 @@
+/* ==========================================================================
+   BUTTONS / COMPONENTS
+   ========================================================================== */
+
+.btn {
+    background: none;
+    border: none;
+    outline: 5px var(--color-primary) solid;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin-top: 40px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+        background: var(--color-primary);
+        outline-width: 2px;
+        color: var(--color-bg-primary);
+    }
+}

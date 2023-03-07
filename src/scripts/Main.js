@@ -1,5 +1,4 @@
-import Carousel from './components/Carousel';
-import Icons from './utils/Icons';
+// import Icons from './utils/Icons';
 
 class Main {
   constructor() {
@@ -8,19 +7,9 @@ class Main {
 
   init() {
     document.documentElement.classList.add('has-js');
-    Icons.load();
+    // Icons.load(); Aucune icône dans ce projet
 
-    const components = document.querySelectorAll('[data-component]');
-    for (let i = 0; i < components.length; i++) {
-      const element = components[i];
-      const componentName = element.dataset.component;
-
-      if (componentName == 'Carousel') {
-        new Carousel(element);
-      } else {
-        console.log(`La composante ${componentName} n'existe pas`);
-      }
-    }
+    //new componentFactory();
   }
 }
 new Main();

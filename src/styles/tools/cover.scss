@@ -1,9 +1,11 @@
 /* ==========================================================================
-   WRAPPER / ELEMENT
+   cover / tools
    ========================================================================== */
 
-.wrapper {
-    max-width: $breakpoint-lg;
-    width: calc(100% - var(--spacing-md));
-    margin: 0 auto;
+@mixin cover($position: absolute) {
+    position: $position;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }

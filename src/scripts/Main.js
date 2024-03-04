@@ -1,4 +1,4 @@
-// import Icons from './utils/Icons';
+import Icons from './utils/Icons';
 
 class Main {
   constructor() {
@@ -6,10 +6,14 @@ class Main {
   }
 
   init() {
+    // On ajoute une classe sur le html
+    // pour qu'on puisse savoir si le JavaScript est
+    // supporté dans notre css
     document.documentElement.classList.add('has-js');
-    // Icons.load(); Aucune icône dans ce projet
 
-    //new componentFactory();
+    // Pssst, ton ComponentFactory va ici
+
+    //Icons.load();
   }
 }
 new Main();

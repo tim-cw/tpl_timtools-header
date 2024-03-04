@@ -2,11 +2,6 @@
    card / component
    ========================================================================== */
 
-.card {
-    background: var(--color-white);
-    border-radius: 10px;
-}
-
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -43,9 +38,30 @@
     font: 3rem var(--font-primary);
     justify-content: center;
     min-height: 200px;
-    width: 100%;
-}
+    position: relative;
 
-.cards__title {
-    grid-column: 2 / -2;
+    transition: color 0.5s $ease-out-expo;
+    width: 100%;
+    z-index: 1;
+
+    &::before {
+        background-color: var(--color-white);
+        border-radius: 10px;
+        content: '';
+        @include cover();
+        transition: 0.5s $ease-out-expo;
+        transition-property: background, transform;
+        z-index: -1;
+    }
+
+    // hover
+    a:hover & {
+        color: var(--color-white);
+        text-decoration: none;
+
+        &::before {
+            background-color: var(--color-primary);
+            transform: scale(1.05);
+        }
+    }
 }

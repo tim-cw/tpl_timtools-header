@@ -10,6 +10,11 @@ $breakpoint-lg: 1440px;
 $breakpoint-xl: 1920px;
 
 :root {
-    --spacing-md: 4rem;
-    --grid-gap: 30px;
+    --spacing-xs: 5px;
+    --spacing-sm: 15px;
+    --spacing-md: 30px;
+    --spacing-lg: 50px;
+    --spacing-xl: 105px;
+
+    --grid-gap: var(--spacing-md);
 }

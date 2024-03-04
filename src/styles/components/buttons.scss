@@ -22,3 +22,19 @@
         color: var(--color-bg-primary);
     }
 }
+
+.section {
+    .header {
+        .button {
+            background: blue;
+
+            .nav-is-active & {
+                background: tomato;
+            }
+
+            & .red {
+                background: tomato;
+            }
+        }
+    }
+}

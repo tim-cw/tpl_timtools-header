@@ -3,47 +3,46 @@
    ========================================================================== */
 
 .header {
-    --header-height: 100px;
     background-color: var(--color-bg-secondary);
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
-    height: var(--header-height);
-    width: 100%;
-    z-index: 10;
+    padding: 0 var(--spacing-sm);
+    height: 100px;
 
-    @media screen and (min-width: $breakpoint-md) {
-        padding: calc(var(--spacing-md) / 2) var(--spacing-md);
-        justify-content: center;
+    @media screen and (min-width: $breakpoint-lg) {
+        padding: 0 var(--spacing-lg);
     }
 }
 
 .header__brand {
-    width: 200px;
+    max-width: 200px;
     position: relative;
     z-index: 10;
 }
 
+// Mettre ton .header__toggle ici
+
+.nav-primary {
+    display: none;
+
+    @media screen and (min-width: $breakpoint-md) {
+        display: block;
+    }
+
+    ul {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
 .nav-primary__item {
-    font-size: var(--font-size-h1);
     color: var(--color-white);
     text-transform: uppercase;
-    padding: 0 20px;
     position: relative;
-
-    &::before {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 20px;
-        height: 2px;
-        width: calc(100% - 40px);
-        content: '';
-        background-color: white;
-        transform: scaleX(0);
-        transition: 0.3s all;
-    }
 
     &:hover {
         color: inherit;
@@ -52,7 +51,6 @@
     @media screen and (min-width: $breakpoint-md) {
         font-size: var(--font-size-h2);
         color: var(--color-white);
-        padding: 0 20px;
         position: relative;
         text-transform: none;
 
@@ -60,9 +58,9 @@
             display: block;
             position: absolute;
             top: 100%;
-            left: 20px;
+            left: 0;
             height: 2px;
-            width: calc(100% - 40px);
+            width: 100%;
             content: '';
             background-color: white;
             transform: scaleX(0);

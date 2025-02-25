@@ -27,6 +27,7 @@ export function scss() {
     .pipe(
       sass({
         includePaths: ['node_modules'],
+        sassOptions: { quietDeps: true },
         outputStyle: 'compressed',
       })
     )

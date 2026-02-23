@@ -48,7 +48,10 @@ async function main() {
   execSync(`git clone --depth 1 --no-checkout ${STACK_REPO} "${TMP_DIR}"`, {
     stdio: "inherit",
   });
-  execSync(`git -C "${TMP_DIR}" checkout tags/${tagVersion}`, {
+  execSync(`git -C "${TMP_DIR}" fetch --tags`, {
+    stdio: "inherit",
+  });
+  execSync(`git -C "${TMP_DIR}" checkout ${tagVersion}`, {
     stdio: "inherit",
   });
 
